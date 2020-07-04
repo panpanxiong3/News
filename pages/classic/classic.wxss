@@ -2,7 +2,7 @@
 /* view 默认是100% */
 .block-item {
   display: flex;
-  flex-direction: column-reverse;
+  justify-content: space-around;
 }
 
 .item {
