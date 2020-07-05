@@ -1,0 +1,9 @@
+/* components/likes/index.wxss */
+.table-like image{
+  width: 32rpx;
+  height: 28rpx;
+}
+
+.table-like text{
+  font-size: 24rpx;
+}

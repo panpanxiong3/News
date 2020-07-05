@@ -1,2 +1,5 @@
 <!--components/likes/index.wxml-->
-<text>components/likes/index.wxml</text>
+<view class="table-like">
+  <image src="images/like.png"/>
+  <text>8</text>
+</view>
