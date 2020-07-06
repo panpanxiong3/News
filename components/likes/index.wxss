@@ -1,9 +1,17 @@
 /* components/likes/index.wxss */
-.table-like image{
+.table-like {
+  display: inline-flex;
+}
+
+.table-like image {
   width: 32rpx;
   height: 28rpx;
 }
 
-.table-like text{
+.table-like text {
   font-size: 24rpx;
+  color: #bbbbbb;
+  position: relative;
+  left: 9rpx;
+  bottom: 10rpx;
 }

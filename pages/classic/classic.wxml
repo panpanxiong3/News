@@ -1,6 +1,2 @@
 <!--pages/classic/classic.wxml-->
-<view class="block-item">
-	<view class="item color1">1</view>
-	<view class="item color2">2</view>
-	<view class="item color3">3</view>
-</view>
+<v-likes></v-likes>

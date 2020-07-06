@@ -1,23 +1,2 @@
 /* pages/classic/classic.wxss */
 /* view 默认是100% */
-.block-item {
-  display: flex;
-  justify-content: space-around;
-}
-
-.item {
-  width: 100px;
-  height: 100px;
-}
-
-.color1 {
-  background-color: blueviolet;
-}
-
-.color2 {
-  background-color: burlywood;
-}
-
-.color3 {
-  background-color: chartreuse;
-}
