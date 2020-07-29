@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "v-likes":"/components/likes/index"
+    "v-likes":"/components/likes/index",
+    "v-movic":"/components/classic/movic/index"
   }
 }

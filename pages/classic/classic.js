@@ -1,8 +1,8 @@
 // pages/classic/classic.js
 import {
-  HTTP
-} from '../../util/http';
-let http = new HTTP();
+  Classic
+} from '../../model/classic';
+let classic = new Classic();
 Page({
 
   /**
@@ -16,21 +16,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    http.requst({
-      url: 'classic/latest',
-      success: (res) => {
-        console.log(res);
-      }
+    classic.getLates((res) => {
+      this.setData({
+        classicData: res.data
+      })
     })
-    // wx.request({
-    //   url: 'http://bl.7yue.pro/v1/classic/latest',
-    //   header:{
-    //     appkey:'i9LomuZ9PgzFrmIt'
-    //   },
-    //   success:(res)=> {
-    //    console.log(this.data.test); 
-    //   }
-    // })
   },
 
   /**
