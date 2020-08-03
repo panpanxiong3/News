@@ -4,10 +4,10 @@ import {
 } from '../../model/classic';
 
 import {
-  Like
+  LikeModel
 } from '../../model/like';
 let classicModel = new Classic();
-let likeModel = new Like;
+let likeModel = new LikeModel();
 Page({
 
   /**
@@ -23,7 +23,7 @@ Page({
   onLoad: function (options) {
     classicModel.getLates((res) => {
       this.setData({
-        classicData: res.data
+        classicData: res
       })
     })
   },

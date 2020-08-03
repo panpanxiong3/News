@@ -1,17 +1,22 @@
-const { HTTP } = require("../util/http");
+import {
+  HTTP
+} from '../util/http'
 
-class Like extends HTTP {
-      like(behavior,artid,type){
-         let url = behavior == 'like' ? 'like':'like/cancel'
-         this.requst({
-           url: url,
-           method:'POST',
-           data:{
-            type:type,
-            art_id:artid,
-           }
-         })
-      }
+class LikeModel extends HTTP {
+  like(behavior, artID, category){
+      let url = behavior == 'like' ? 'like' : 'like/cancel'
+      this.request({
+          url: url,
+          method: 'POST',
+          data: {
+              art_id: artID,
+              type: category
+          }
+      })
+  }
+
 }
 
-export {Like};
+export {
+  LikeModel
+}

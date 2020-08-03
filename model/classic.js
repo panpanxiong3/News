@@ -2,7 +2,7 @@ import { HTTP } from "../util/http";
 
 class Classic extends HTTP {
     getLates(sCoadBack){
-      this.requst({
+      this.request({
         url: 'classic/latest',
         success: (res) => {
           sCoadBack(res);
