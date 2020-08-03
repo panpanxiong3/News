@@ -6,7 +6,7 @@ class Classic extends HTTP {
         url: 'classic/latest',
         success: (res) => {
           sCoadBack(res);
-        }s
+        }
       });
     }
 }

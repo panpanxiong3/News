@@ -2,7 +2,12 @@
 import {
   Classic
 } from '../../model/classic';
-let classic = new Classic();
+
+import {
+  Like
+} from '../../model/like';
+let classicModel = new Classic();
+let likeModel = new Like;
 Page({
 
   /**
@@ -16,12 +21,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    classic.getLates((res) => {
+    classicModel.getLates((res) => {
       this.setData({
         classicData: res.data
       })
     })
   },
+
+
+  // 监听是否喜欢
+  onLike: function (event) {
+     let behaveir = event.detail.behaveir;
+     likeModel.like(behaveir,this.data.classicData.id,this.data.classicData.type);
+  },
+
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

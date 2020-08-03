@@ -32,6 +32,12 @@ Component({
         count: count,
         isLike: !isLike
       })
+
+      // 激活
+      let behaveir = this.properties.isLike ? 'cancal' : 'like';
+      this.triggerEvent('like', {
+        behaveir: behaveir
+      })
     }
   }
 })
