@@ -8,6 +8,7 @@
     "navigationBarTitleText": "皛熊随记",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
+    "navigationStyle":"default",
     "enablePullDownRefresh": true
   },
   "sitemapLocation": "sitemap22.json"

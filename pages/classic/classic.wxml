@@ -1,3 +1,4 @@
 <!--pages/classic/classic.wxml-->
-<v-likes bind:like="onLike" count="{{classicData.fav_nums}}" isLike="{{classicData.like_status === 0 ? false : true}}"></v-likes>
+<v-epsoide></v-epsoide>
+<v-likes bind:like="onLike" count="{{classicData.fav_nums}}" isLike="{{classicData.like_status == 0 ? true : false}}"></v-likes>
 <v-movic img="{{classicData.image}}" text="{{classicData.content}}"></v-movic>

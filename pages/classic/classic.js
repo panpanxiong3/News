@@ -22,7 +22,6 @@ Page({
    */
   onLoad: function (options) {
     classicModel.getLates((res) => {
-      console.log("res",res)
       this.setData({
         classicData: res
       })
@@ -33,8 +32,7 @@ Page({
   // 监听是否喜欢
   onLike: function (event) {
      let behaveir = event.detail.behaveir;
-     console.log(this.data);
-    //  likeModel.like(behaveir,this.data.classicData.id,this.data.classicData.type);
+     likeModel.like(behaveir,this.data.classicData.id,this.data.classicData.type);
   },
 
 
