@@ -1,2 +1,11 @@
 /* pages/classic/classic.wxss */
 /* view 默认是100% */
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.like-model{
+  margin-top: 10rpx;
+  margin-right: 25rpx;
+}
