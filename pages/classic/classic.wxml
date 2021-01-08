@@ -1,6 +1,14 @@
 <!--pages/classic/classic.wxml-->
-<view class="header">
-  <v-epsoide index="{{classicData.index}}"></v-epsoide>
-  <v-likes class="like-model" bind:like="onLike" count="{{classicData.fav_nums}}" isLike="{{classicData.like_status == 0 ? true : false}}"></v-likes>
+<view class="container">
+  <view class="header">
+    <!-- 期刊与年月组件 -->
+    <v-epsoide index="{{classicData.index}}"></v-epsoide>
+    <!-- 点赞组件 -->
+    <v-likes class="like-model" bind:like="onLike" count="{{classicData.fav_nums}}"
+      isLike="{{classicData.like_status == 0 ? true : false}}"></v-likes>
+  </view>
+  <!-- 显示图片组件 -->
+  <v-movic img="{{classicData.image}}" text="{{classicData.content}}"></v-movic>
+  <!-- 点击切换组件 -->
+  <v-navi class="navi"></v-navi>
 </view>
-<v-movic img="{{classicData.image}}" text="{{classicData.content}}"></v-movic>

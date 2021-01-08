@@ -2,6 +2,7 @@
   "usingComponents": {
     "v-likes":"/components/likes/index",
     "v-movic":"/components/classic/movic/index",
-    "v-epsoide":"/components/epsoide/index"
+    "v-epsoide":"/components/epsoide/index",
+    "v-navi":"/components/navi/index"
   }
 }
