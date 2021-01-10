@@ -10,5 +10,5 @@
   <!-- 显示图片组件 -->
   <v-movic img="{{classicData.image}}" text="{{classicData.content}}"></v-movic>
   <!-- 点击切换组件 -->
-  <v-navi class="navi"></v-navi>
+  <v-navi class="navi" title="{{classicData.title}}" first="{{first}}" latest="{{latest}}" bind:left="onNext" bind:right="onPrevious"></v-navi>
 </view>

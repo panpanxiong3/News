@@ -14,7 +14,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    test: 1
+    first:false,
+    latest:true
   },
 
   /**
@@ -31,11 +32,22 @@ Page({
 
   // 监听是否喜欢
   onLike: function (event) {
-     let behaveir = event.detail.behaveir;
-     likeModel.like(behaveir,this.data.classicData.id,this.data.classicData.type);
+    let behaveir = event.detail.behaveir;
+    likeModel.like(behaveir, this.data.classicData.id, this.data.classicData.type);
+  },
+  /**
+   * 监听navi组件向左切换动作
+   */
+  onNext:function(){
+    console.log("向左切换")
   },
 
-
+  /**
+   * 监听navi组件向右切换动作
+   */
+  onPrevious:function(){
+    console.log("向右切换")
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

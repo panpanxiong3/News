@@ -4,9 +4,9 @@ Component({
    * 组件的属性列表
    */
   properties: {
-      title:String,
-      first:Boolean,
-      latest:Boolean
+    title: String,
+    first: Boolean,
+    latest: Boolean
   },
 
   /**
@@ -23,6 +23,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    onLeft: function () {
+      this.properties.first && this.triggerEvent("left", {}, {});
+    },
 
+    onRight: function () {
+      this.properties.latest && this.triggerEvent("right", {}, {});
+    }
   }
 })
