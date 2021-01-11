@@ -9,6 +9,15 @@ class Classic extends HTTP {
         }
       });
     }
+
+    getPrevious(index,sCoadBack){
+       this.request({
+         url:"classic/" + index + "/previous",
+         success:(res)=>{
+           sCoadBack(res);
+         }
+       })
+    }
 }
 
 export {Classic};

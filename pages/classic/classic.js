@@ -46,7 +46,12 @@ Page({
    * 监听navi组件向右切换动作
    */
   onPrevious:function(){
-    console.log("向右切换")
+    let index = this.data.classicData.index;
+    classicModel.getPrevious(index,(res)=>{
+      this.setData({
+        classicData:res
+      })
+    })
   },
 
   /**
