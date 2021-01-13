@@ -24,11 +24,11 @@ Component({
    */
   methods: {
     onLeft: function () {
-      this.properties.first && this.triggerEvent("left", {}, {});
+      this.properties.latest && this.triggerEvent("left", {}, {});
     },
 
     onRight: function () {
-      this.properties.latest && this.triggerEvent("right", {}, {});
+      this.properties.first && this.triggerEvent("right", {}, {});
     }
   }
 })

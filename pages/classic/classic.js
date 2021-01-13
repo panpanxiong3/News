@@ -14,8 +14,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    first:false,
-    latest:true
+    first:true,
+    latest:false
   },
 
   /**
@@ -39,17 +39,26 @@ Page({
    * 监听navi组件向左切换动作
    */
   onNext:function(){
-    console.log("向左切换")
+    this._setClassic('next')
   },
 
   /**
    * 监听navi组件向右切换动作
    */
   onPrevious:function(){
+    this._setClassic('previous')
+  },
+/**
+ * 设置当前期刊信息
+ * @param {*} direction 点击方向 
+ */
+  _setClassic:function(direction){
     let index = this.data.classicData.index;
-    classicModel.getPrevious(index,(res)=>{
+    classicModel.getClassic(index,direction,(res)=>{
       this.setData({
-        classicData:res
+        classicData:res,
+        first:classicModel.isFirst(res.index),
+        latest:classicModel.isLaster(res.index)
       })
     })
   },
