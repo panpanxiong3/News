@@ -4,8 +4,8 @@
     <!-- 期刊与年月组件 -->
     <v-epsoide index="{{classicData.index}}"></v-epsoide>
     <!-- 点赞组件 -->
-    <v-likes class="like-model" bind:like="onLike" count="{{classicData.fav_nums}}"
-      isLike="{{classicData.like_status == 0 ? true : false}}"></v-likes>
+    <v-likes class="like-model" bind:like="onLike" count="{{likeCount}}"
+      isLike="{{likeState}}"></v-likes>
   </view>
   <!-- 显示图片组件 -->
   <v-movic img="{{classicData.image}}" text="{{classicData.content}}"></v-movic>

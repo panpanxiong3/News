@@ -14,8 +14,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    first:true,
-    latest:false
+    first: true, //是否为最新一期
+    latest: false, //是否为最后一期
+    likeCount: 0, //点赞数
+    likeState: false // 是否点赞
   },
 
   /**
@@ -24,7 +26,9 @@ Page({
   onLoad: function (options) {
     classicModel.getLates((res) => {
       this.setData({
-        classicData: res
+        classicData: res,
+        likeCount:res.fav_nums,
+        likeState:res.like_status==0?true:false
       })
     })
   },
@@ -38,27 +42,36 @@ Page({
   /**
    * 监听navi组件向左切换动作
    */
-  onNext:function(){
+  onNext: function () {
     this._setClassic('next')
   },
 
   /**
    * 监听navi组件向右切换动作
    */
-  onPrevious:function(){
+  onPrevious: function () {
     this._setClassic('previous')
   },
-/**
- * 设置当前期刊信息
- * @param {*} direction 点击方向 
- */
-  _setClassic:function(direction){
+  /**
+   * 设置当前期刊信息
+   * @param {*} direction 点击方向 
+   */
+  _setClassic: function (direction) {
     let index = this.data.classicData.index;
-    classicModel.getClassic(index,direction,(res)=>{
+    classicModel.getClassic(index, direction, (res) => {
       this.setData({
-        classicData:res,
-        first:classicModel.isFirst(res.index),
-        latest:classicModel.isLaster(res.index)
+        classicData: res,
+        first: classicModel.isFirst(res.index),
+        latest: classicModel.isLaster(res.index)
+      });
+      this._setClassicLikeState(res.id,res.type);
+    })
+  },
+  _setClassicLikeState: function (artid, category) {
+    likeModel.getClassicLikeStatus(artid, category, (res) => {
+      this.setData({
+        likeCount: res.fav_nums,
+        likeState: res.like_status == 0 ? true : false
       })
     })
   },

@@ -30,7 +30,7 @@ class Classic extends HTTP {
     //无缓存，调用api并设置缓存
     if (!classics) {
       this.request({
-        url: "classic/" + index + "/" + isPrevious,
+        url: `classic/${index}/${isPrevious}`,
         success: (res) => {
           sCoadBack(res);
           wx.setStorageSync(classicKey, res);
