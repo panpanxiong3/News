@@ -6,5 +6,6 @@
     "v-essay":"/components/classic/essay/index",
     "v-epsoide":"/components/epsoide/index",
     "v-navi":"/components/navi/index"
-  }
+  },
+  "requiredBackgroundModes": ["audio"]
 }
