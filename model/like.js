@@ -14,7 +14,12 @@ class LikeModel extends HTTP {
           }
       })
   }
-
+  /**
+   * like组件调用获取数据
+   * @param {*} artId id名称
+   * @param {*} category type方式
+   * @param {*} sCallBack 回调参数
+   */
   getClassicLikeStatus(artId,category,sCallBack){
     let url = `classic/${category}/${artId}/favor`;
     this.request({

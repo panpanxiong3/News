@@ -1,8 +1,9 @@
 let BehaviorClassic = Behavior({
   properties: {
     img: String,
-    text: String
-  }
+    text: String,
+    hidden:Boolean
+  },
 });
 
 export {

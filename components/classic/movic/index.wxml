@@ -1,5 +1,5 @@
 <!--components/movic/index.wxml-->
-<view class="classic-container">
+<view hidden="{{hidden}}" class="classic-container">
   <image class="classic-img" src="{{img}}"/>
   <image class="tag" src="{{imgTag}}"/>
   <text class="content">{{text}}</text>
