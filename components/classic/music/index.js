@@ -14,17 +14,8 @@ Component({
   },
   behaviors: [BehaviorClassic],
   attached:function(){
-    if(pgM.paused){
-      this.setData({
-        playing:false
-      })
-      return;
-    }
-    if(pgM.play &&  pgM.src == this.properties.src){
-      this.setData({
-        playing:true
-      })
-    } 
+    this._musicAttached();
+    this._listernMusic();
   },
   /**
    * 组件的初始数据
@@ -52,6 +43,39 @@ Component({
          });
          pgM.pause()
        }
+    },
+
+    _musicAttached:function(){
+      if(pgM.paused){
+        this.setData({
+          playing:false
+        })
+        return;
+      }
+      if(pgM.play &&  pgM.src == this.properties.src){
+        this.setData({
+          playing:true
+        })
+      } 
+    },
+
+    _listernMusic:function(){
+      //监听背景音播放
+       pgM.onPlay(()=>{
+         this._musicAttached();
+       })
+       //监听背景音暂停
+       pgM.onPause(()=>{
+         this._musicAttached();
+       })
+       //监听背景音播放结束
+       pgM.onEnded(()=>{
+         this._musicAttached();
+       })
+       //监听背景音取消
+       pgM.onStop(()=>{
+         this._musicAttached();
+       })
     }
   }
 })
