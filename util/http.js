@@ -7,15 +7,15 @@ const tips = {
 }
 
 class HTTP{
-    request(params){
+    _request(url,data={},method="GET"){
+
+    }
+    request(url,data={},method="GET"){
         // url, data, method,
-        if(!params.method){
-            params.method="GET"
-        }
         wx.request({
-            url:config.api_base_url + params.url,
-            method:params.method,
-            data:params.data,
+            url:config.api_base_url + url,
+            method:method,
+            data:data,
             header:{
                 'content-type':'application/json',
                 'appkey':config.appkey
