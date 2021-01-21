@@ -1,4 +1,8 @@
 // pages/book/book.js
+import {
+  Books
+} from "../../model/books";
+const booksModel = new Books();
 Page({
 
   /**
@@ -12,7 +16,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    booksModel.getBooks().then((res) => {
+      console.log(res);
+      return booksModel.getBooksCount()
+    }).then((res => {
+      console.log(res);
+      return booksModel.getBooksCount()
+    })).then((res) => {
+      console.log(res);
+    })
   },
 
   /**
