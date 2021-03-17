@@ -1,1 +1,3 @@
-<v-book book="{{books[0]}}"></v-book>
+<block wx:for="{{books}}"> 
+  <v-book book="{{item}}"></v-book>
+</block>
