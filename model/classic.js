@@ -7,8 +7,8 @@ class Classic extends HTTP {
    * 获取最新一期期刊信息
    * @param {*} sCoadBack 回调参数
    */
-  getLates(sCoadBack) {
-    this.request({
+  getLatest(sCoadBack) {
+     this.request({
       url: 'classic/latest',
       success: (res) => {
         sCoadBack(res);
@@ -32,6 +32,7 @@ class Classic extends HTTP {
       this.request({
         url: `classic/${index}/${isPrevious}`,
         success: (res) => {
+          console.log(res);
           sCoadBack(res);
           wx.setStorageSync(classicKey, res);
         }

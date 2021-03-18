@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5f2bae5-c372-4867-bf34-78eed5f180ef" name="Default Changelist" comment="" />
+    <list default="true" id="b5f2bae5-c372-4867-bf34-78eed5f180ef" name="Default Changelist" comment="Default Changelist">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_1_7,_9_06_下午_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_1_7__9_06___Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +38,8 @@
       <updated>1610024781278</updated>
       <workItem from="1610024784763" duration="32000" />
       <workItem from="1610542966005" duration="47000" />
+      <workItem from="1616023767597" duration="23000" />
+      <workItem from="1616023794462" duration="280000" />
     </task>
     <servers />
   </component>

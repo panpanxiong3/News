@@ -1,6 +1,6 @@
 import {
   HTTP
-} from '../util/http'
+} from '../util/http-p'
 
 class LikeModel extends HTTP {
   like(behavior, artID, category){

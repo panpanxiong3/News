@@ -24,7 +24,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    classicModel.getLates((res) => {
+    classicModel.getLatest((res) => {
       this.setData({
         classicData: res,
         likeCount:res.fav_nums,

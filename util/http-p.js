@@ -34,6 +34,7 @@ class HTTP{
                 }
             },
             fail:(err)=>{
+                reject();
                 this._show_error(1)
             }
         })

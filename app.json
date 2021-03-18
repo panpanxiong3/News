@@ -21,7 +21,7 @@
       {
         "selectedIconPath": "/images/tab/classic@highlight.png",
         "pagePath": "pages/classic/classic",
-        "text": "流行",
+        "text": "流行", 
         "iconPath": "/images/tab/classic.png"
       },
       {
@@ -38,5 +38,6 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap22.json"
+  "sitemapLocation": "sitemap22.json",
+  "requiredBackgroundModes": ["audio"]
 }
