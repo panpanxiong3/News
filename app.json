@@ -2,7 +2,8 @@
   "pages": [
     "pages/classic/classic",
     "pages/book/book",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/book-detail/book-detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#000",
@@ -10,7 +11,7 @@
     "navigationBarTitleText": "皛熊随记",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
-    "navigationStyle":"default",
+    "navigationStyle": "default",
     "enablePullDownRefresh": true
   },
   "tabBar": {
@@ -21,7 +22,7 @@
       {
         "selectedIconPath": "/images/tab/classic@highlight.png",
         "pagePath": "pages/classic/classic",
-        "text": "流行", 
+        "text": "流行",
         "iconPath": "/images/tab/classic.png"
       },
       {
@@ -39,5 +40,7 @@
     ]
   },
   "sitemapLocation": "sitemap22.json",
-  "requiredBackgroundModes": ["audio"]
+  "requiredBackgroundModes": [
+    "audio"
+  ]
 }
