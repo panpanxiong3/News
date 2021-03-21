@@ -50,18 +50,24 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
+    "plugin": {
       "list": []
     },
     "game": {
-      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "name": "pages/book-detail/book-detail",
+          "pathName": "pages/book-detail/book-detail",
+          "query": "bid=65",
+          "scene": null
+        }
+      ]
     }
   }
 }

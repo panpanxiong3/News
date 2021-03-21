@@ -1,2 +1,18 @@
-<!--pages/book-detail/book-detail.wxml-->
-<text>pages/book-detail/book-detail.wxml</text>
+<view class="container">
+  <view class="header">
+    <image src="{{details.image}}"></image>
+    <text class="title">{{details.title}}</text>
+    <text class="author">{{details.author}}</text>
+  </view>
+
+  <view class="sub-container">
+    <text class="headline">短评</text>
+    <view class="comments-container">
+      <block wx:for="{{comments}}" wx:key="index">
+        <v-tag tag-class="{{index==0?'tag-class1':''||index==1?'tag-class2':''}}" text="{{item.content}}">
+          <text class="num" slot="after">+ {{item.nums}}</text>
+        </v-tag>
+      </block>
+    </view>
+  </view>
+</view>
