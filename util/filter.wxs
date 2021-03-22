@@ -1,0 +1,11 @@
+var getSpace = function(text){
+  if(!text){
+    return
+  }
+   var textSpace = getRegExp("\\\\n","g");
+   return text.replace(textSpace,"\n&nbsp;&nbsp;&nbsp;&nbsp;")
+}
+
+module.exports = {
+  getSpace:getSpace
+}
