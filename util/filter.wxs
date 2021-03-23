@@ -6,6 +6,11 @@ var getSpace = function(text){
    return text.replace(textSpace,"\n&nbsp;&nbsp;&nbsp;&nbsp;")
 }
 
+var limit = function(array,length){
+  return array.slice(0,length);
+}
+
 module.exports = {
-  getSpace:getSpace
+  getSpace:getSpace,
+  limit:limit
 }
