@@ -2,8 +2,12 @@
 import {
   Books
 } from '../../model/books';
+import {
+  LikeModel
+} from '../../model/like'
 
 let booksModel = new Books();
+let likeModel = new LikeModel();
 Page({
 
   /**
@@ -34,7 +38,8 @@ Page({
      likeStatus.then(res=>{
        console.log("点赞状态",res);
       this.setData({
-        likeStatus:res
+        likeStatus:res.like_status==0?true:false,
+        likeCount:res.fav_nums
       })
     })
 
@@ -93,5 +98,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  // 监听喜欢
+  onLike(event){
+    let behaveir = event.detail.behaveir;
+    likeModel.like(behaveir,this.data.details.id,400);
   }
 })
