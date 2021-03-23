@@ -1,16 +1,28 @@
-var getSpace = function(text){
-  if(!text){
+var getSpace = function (text) {
+  if (!text) {
     return
   }
-   var textSpace = getRegExp("\\\\n","g");
-   return text.replace(textSpace,"\n&nbsp;&nbsp;&nbsp;&nbsp;")
+  var textSpace = getRegExp("\\\\n", "g");
+  return text.replace(textSpace, "\n&nbsp;&nbsp;&nbsp;&nbsp;")
 }
 
-var limit = function(array,length){
-  return array.slice(0,length);
+var limit = function (array, length) {
+  return array.slice(0, length);
+}
+
+var highLight = function (index) {
+  switch (index) {
+    case 0:
+      return 'tag-class1';
+    case 1:
+      return 'tag-class2';
+    default:
+      return ''
+  }
 }
 
 module.exports = {
-  getSpace:getSpace,
-  limit:limit
+  getSpace: getSpace,
+  limit: limit,
+  highLight:highLight
 }

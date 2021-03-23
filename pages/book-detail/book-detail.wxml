@@ -10,7 +10,7 @@
     <text class="headline">短评</text>
     <view class="comments-container">
       <block wx:for="{{util.limit(comments,15)}}" wx:key="index">
-        <v-tag tag-class="{{index==0?'tag-class1':''||index==1?'tag-class2':''}}" text="{{item.content}}">
+        <v-tag tag-class="{{util.highLight(index)}}" text="{{item.content}}">
           <text class="num" slot="after">+ {{item.nums}}</text>
         </v-tag>
       </block>
@@ -57,7 +57,7 @@
   </view>
   <view class="comments-container">
     <block wx:for="{{util.limit(comments,3)}}" wx:key="index">
-      <v-tag tag-class="{{index==0?'tag-class1':''||index==1?'tag-class2':''}}" text="{{item.content}}">
+      <v-tag tag-class="{{util.highLight(index)}}" text="{{item.content}}">
         <text class="num" slot="after">+ {{item.nums}}</text>
       </v-tag>
     </block>
