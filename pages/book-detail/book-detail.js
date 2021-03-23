@@ -16,7 +16,8 @@ Page({
   data: {
       details:null, //书籍信息
       likeStatus:false, //点赞数量
-      comments:[] //短评信息
+      comments:[], //短评信息
+      posting:false //输入框显示状态
   },
 
   /**
@@ -103,5 +104,21 @@ Page({
   onLike(event){
     let behaveir = event.detail.behaveir;
     likeModel.like(behaveir,this.data.details.id,400);
+  },
+  /**
+   * 监听post输入框开启
+   */
+  onPosting(){
+     this.setData({
+       posting:true
+     })
+  },
+/**
+ * 监听post输入框关闭
+ */
+  onCancel(){
+    this.setData({
+      posting:false
+    })
   }
 })

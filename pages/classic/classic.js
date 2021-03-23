@@ -28,7 +28,7 @@ Page({
       this.setData({
         classicData: res,
         likeCount:res.fav_nums,
-        likeState:res.like_status==0?true:false
+        likeState:res.like_status==0?false:true
       })
     })
   },
