@@ -126,8 +126,20 @@ Page({
    * @param {*} event 组件回调信息
    */
   onPostingTag(event){
-     let content = event.detail.content; //点击标签文字内容
+     let content = event.detail.content || event.detail.value; //点击标签文字内容
      let bid = this.data.details.id; //书本id
+     if(!content){
+       wx.showToast({
+         title: '请输入评论',
+         icon:'none'
+       })
+     }
+     if(content.length >12){
+       wx.showToast({
+         title: '请输入小于12个字符的评论',
+         icon: 'none'
+       })
+     }
      booksModel.postTagContent(bid,content).then(res=>{
        if(res){
          wx.showToast({
@@ -136,7 +148,8 @@ Page({
          })
          this.data.comments.unshift({content:content,nums:1});
          this.setData({
-           comments:this.data.comments
+           comments:this.data.comments,
+           posting:false
          })
        }
      })
