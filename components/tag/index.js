@@ -26,6 +26,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    onPostTag:function(){
+      this.triggerEvent('postingTag',{
+         content:this.properties.text
+      })
+    }
   }
 })

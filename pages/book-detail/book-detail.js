@@ -120,5 +120,25 @@ Page({
     this.setData({
       posting:false
     })
+  },
+  /**
+   * 监听标签点击事件
+   * @param {*} event 组件回调信息
+   */
+  onPostingTag(event){
+     let content = event.detail.content; //点击标签文字内容
+     let bid = this.data.details.id; //书本id
+     booksModel.postTagContent(bid,content).then(res=>{
+       if(res){
+         wx.showToast({
+           title: '+1',
+           icon:'none'
+         })
+         this.data.comments.unshift({content:content,nums:1});
+         this.setData({
+           comments:this.data.comments
+         })
+       }
+     })
   }
 })
