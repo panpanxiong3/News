@@ -9,7 +9,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    books:[]
+    books: [],
+    searching: false
   },
 
   /**
@@ -18,7 +19,7 @@ Page({
   onLoad: function (options) {
     booksModel.getBooks().then((res) => {
       this.setData({
-        books:res
+        books: res
       })
     })
   },
@@ -70,5 +71,22 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   * 点击搜索页面
+   */
+  onSearch() {
+    this.setData({
+      searching: true
+    })
+  },
+  /**
+   * 组件自定义事件: 取消搜索页面
+   */
+  onCancel(event) {
+    console.log(event);
+    this.setData({
+      searching: false
+    })
   }
 })
