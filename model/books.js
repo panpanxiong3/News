@@ -52,6 +52,20 @@ class Books extends HTTP {
       }
     })
   }
+/**
+ * 书籍搜索
+ * @param {*} start 开始记录数
+ * @param {*} q 搜索内容
+ */
+  searchWord(start,q){
+   return this.request({
+     url:'book/search',
+     data:{
+       q:q,
+       start:start
+     }
+   })
+  }
 }
 
 export {

@@ -2,6 +2,10 @@
 import {
   Books
 } from "../../model/books";
+
+import {
+  random
+} from "../../util/common"
 const booksModel = new Books();
 Page({
 
@@ -10,7 +14,8 @@ Page({
    */
   data: {
     books: [],
-    searching: false
+    searching: false,
+    more: null //上拉屏幕获取随机字符串 
   },
 
   /**
@@ -84,9 +89,17 @@ Page({
    * 组件自定义事件: 取消搜索页面
    */
   onCancel(event) {
-    console.log(event);
     this.setData({
       searching: false
+    })
+  },
+
+  /**
+   * 监听用户上拉触底事件
+   */
+  onReachBottom() {
+    this.setData({
+      more: random(16)
     })
   }
 })
