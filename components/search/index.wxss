@@ -102,6 +102,7 @@
 
 .loading {
   margin: 50rpx 0 50rpx 0;
+  /* margin: 50rpx auto; */
 }
 
 .loading-center {
