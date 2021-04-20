@@ -42,4 +42,5 @@
 </view>
 <v-loading class="loading-center" wx:if="{{loadingCent}}"></v-loading>
 <v-loading class="loading" wx:if="{{loading}}"></v-loading>
+<text class="empty-tip" wx:if="{{noneResult}}">暂时未搜索到该书籍</text>
 </view>

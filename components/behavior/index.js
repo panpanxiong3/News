@@ -1,7 +1,9 @@
 const paginationBev = Behavior({
   data: {
     searchWords: [], //搜索获得数据
-    total: null //获取搜索数据总数
+    total: null, //获取搜索数据总数
+    total: null, //获取搜索数据总数
+    noneResult:false //是否有返回搜索数据
   },
   methods: {
     /**
@@ -21,6 +23,12 @@ const paginationBev = Behavior({
 
     setTotal(data) {
       this.data.total = data
+      this.data.total = data;
+      if(this.data.total == 0){
+        this.setData({
+          noneResult:true
+        })
+      }
     },
 
     hasMore() {
@@ -38,6 +46,43 @@ const paginationBev = Behavior({
     emptyData() {
       this.data.searchWords = [];
       this.data.total = 0;
+      this.setData({
+        noneResult:false,
+        words:''
+      })
+    },
+
+     /**
+     * 私有方法：展示loading加载
+     */
+    showLoadingCent() {
+      this.setData({
+        loadingCent: true
+      })
+    },
+    /**
+     * 私有方法：隐藏loading加载
+     */
+    hideLoadingCent() {
+      this.setData({
+        loadingCent: false
+      })
+    },
+    /**
+     * 私有方法：展示loading加载
+     */
+    showLoading() {
+      this.setData({
+        loading: true
+      })
+    },
+    /**
+     * 私有方法：隐藏loading加载
+     */
+    hideLoading() {
+      this.setData({
+        loading: false
+      })
     }
   }
 })
