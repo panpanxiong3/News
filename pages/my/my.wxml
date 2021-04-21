@@ -1,7 +1,8 @@
 <view class="container">
   <image src="/images/my/my@bg.png" class="bg"></image>
   <!-- open-data组件只能单纯显示用户信息，js获取不到数据 -->
-  <!-- <open-data type="userAvatarUrl" class="avatar avatar-position"/> -->
+  <open-data type="userAvatarUrl" class="avatar avatar-position"/>
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">获取用户信息</button>
   <view class="about-container">
       <view bind:tap="onJumpToAbout" class="about-us">
           <image src="/images/my/about.png" />
@@ -12,5 +13,5 @@
           <text class="description">喜欢的书</text>
       </view>
   </view>
-  <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+  
 </view>
