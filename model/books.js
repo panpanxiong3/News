@@ -8,7 +8,9 @@ class Books extends HTTP {
       url: 'book/hot_list'
     })
   }
-
+/**
+ * 获取喜欢的书的数量
+ */
   getBooksCount() {
     return this.request({
       url: 'book/favor/count'

@@ -174,3 +174,13 @@ color: #666;
   border-radius: 15px;
   padding-left: 25rpx;
 }
+
+.share-btn {
+  margin-top: 28rpx;
+  margin-left: 10rpx;
+}
+
+.share {
+  width: 40rpx;
+  height: 40rpx;
+}

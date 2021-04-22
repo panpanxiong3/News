@@ -4,13 +4,20 @@
     <!-- 期刊与年月组件 -->
     <v-epsoide index="{{classicData.index}}"></v-epsoide>
     <!-- 点赞组件 -->
-    <v-likes class="like-model" bind:like="onLike" count="{{likeCount}}" isLike="{{likeState}}"></v-likes>
+    <view class="like-container">
+      <v-likes class="like-model" bind:like="onLike" count="{{likeCount}}" isLike="{{likeState}}"></v-likes>
+      <v-button class="share-btn" open-type="share">
+        <image class="share" slot="img" src="/images/icon/share.png" />
+      </v-button>
+    </view>
+
   </view>
   <!-- 显示图片组件 -->
   <v-movic hidden="{{classicData.type!=100}}" img="{{classicData.image}}" text="{{classicData.content}}"></v-movic>
-  <v-music wx:if="{{classicData.type==200}}"  img="{{classicData.image}}" text="{{classicData.content}}" src="{{classicData.url}}" title="{{classicData.title}}"></v-music>
+  <v-music wx:if="{{classicData.type==200}}" img="{{classicData.image}}" text="{{classicData.content}}"
+    src="{{classicData.url}}" title="{{classicData.title}}"></v-music>
   <v-essay hidden="{{classicData.type!=300}}" img="{{classicData.image}}" text="{{classicData.content}}"></v-essay>
   <!-- 点击切换组件 -->
-  <v-navi class="navi" title="{{classicData.title}}" first="{{first}}" latest="{{latest}}" bind:left="onNext" 
-  bind:right="onPrevious"></v-navi>
+  <v-navi class="navi" title="{{classicData.title}}" first="{{first}}" latest="{{latest}}" bind:left="onNext"
+    bind:right="onPrevious"></v-navi>
 </view>
