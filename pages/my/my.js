@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    authorized:false,
+    userInfo:null
   },
 
   /**
@@ -69,19 +70,11 @@ Page({
    * @param {} event 授权回调信息
    */
   bindGetUserInfo(e) {
-    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
-    // 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-    // wx.getUserProfile({
-    //   desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-    //   success: (res) => {
-    //     this.setData({
-    //       userInfo: res.userInfo,
-    //       hasUserInfo: true
-    //     })
-    //   }
-    // })
+   
   },
-
+/**
+ * 判断用户是否授权
+ */
   userAuthorized() {
     wx.getSetting({
       withSubscriptions: true,
@@ -90,7 +83,10 @@ Page({
           // 查看是否授权
           wx.getUserInfo({
             success: data => {
-              console.log("用户信息", data)
+              this.setData({
+                userInfo:data.userInfo,
+                authorized:true
+              })
             }
           })
         }else{
@@ -98,5 +94,17 @@ Page({
         }
       }
     })
+  },
+/**
+ * 自定义组件 传递用户信息
+ * @param {*} event  用户信息
+ */
+  onGetUserInfo(event){
+     let userInfo = event.detail.userInfo;
+     if(userInfo){
+       this.setData({
+         userInfo
+       })
+     }
   }
 })
