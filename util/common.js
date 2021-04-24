@@ -25,6 +25,7 @@ const promisic = function(func) {
   }
 }
 
+
 export {
   random,
   promisic

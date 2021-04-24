@@ -1,0 +1,22 @@
+{
+  "name": "xiaoxiongsuiji",
+  "version": "1.0.0",
+  "description": "根据网络提供的api进行设计的新闻页面内容",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panpanxiong3/News.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/panpanxiong3/News/issues"
+  },
+  "homepage": "https://github.com/panpanxiong3/News#readme",
+  "dependencies": {
+    "lin-ui": "^0.9.4"
+  }
+}

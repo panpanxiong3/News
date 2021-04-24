@@ -6,9 +6,9 @@
     <!-- 点赞组件 -->
     <view class="like-container">
       <v-likes class="like-model" bind:like="onLike" count="{{likeCount}}" isLike="{{likeState}}"></v-likes>
-      <v-button class="share-btn" open-type="share">
-        <image class="share" slot="img" src="/images/icon/share.png" />
-      </v-button>
+      <l-button special="{{true}}" class="share-btn" open-type="share">
+        <image class="share" src="/images/icon/share.png" />
+      </l-button>
     </view>
 
   </view>
