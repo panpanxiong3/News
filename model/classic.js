@@ -78,6 +78,15 @@ class Classic extends HTTP {
     let key = 'classic_' + index;
     return key
   }
+
+  getMyFavor(success) {
+    const params = {
+        url: 'classic/favor',
+        success: success
+    }
+    this.request(params)
+}
+
 }
 
 

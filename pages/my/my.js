@@ -15,7 +15,8 @@ Page({
   data: {
     authorized: false,
     userInfo: null,
-    bookCount: 0
+    bookCount: 0,
+    classics:null
   },
 
   /**
@@ -24,6 +25,7 @@ Page({
   onLoad: function (options) {
     this.userAuthorized();
     this.getBookCount();
+    this.getMyFavor();
   },
 
   /**
@@ -94,9 +96,21 @@ Page({
    * 获取喜欢的书书籍数量
    */
   getBookCount() {
-booksModele.getBooksCount().then(res=>{
-  console.log("喜欢的书",res)
-})
+    booksModele.getBooksCount().then(res => {
+      this.setData({
+        bookCount:res.count
+      })
+    })
+  },
+  /**
+   * 获取喜欢的内容信息
+   */
+  getMyFavor() {
+    classicModle.getMyFavor(res => {
+      this.setData({
+        classics: res
+      })
+    })
   },
   /**
    * 获取用户授权信息
